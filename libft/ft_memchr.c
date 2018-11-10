@@ -16,6 +16,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	char	*ss;
 
+	if (s == NULL)
+	  return (NULL);
 	ss = (char*)s;
 	if (*ss == '\0')
 		return (0);
@@ -26,6 +28,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	if (n != 0)
 		return (ss);
-	else
-		return (NULL);
+	return (NULL);
 }
