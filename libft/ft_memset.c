@@ -14,10 +14,10 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	char *bcast;
+	unsigned char *bcast;
 
-	bcast = (char*)b;
-	while (*bcast != '\0' && len > 0)
+	bcast = (unsigned char*)b;
+	while (len > 0)
 	{
 		*bcast++ = c;
 		len--;

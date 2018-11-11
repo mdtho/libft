@@ -3,6 +3,23 @@
 
 int	main(void)
 {
+  char **ap;
+  char hello[] = "hello";
+
+  ap = &hello;
+  
+  return (0);
+}
+  
+
+  /*
+
+MEMALLOC (but need to change it from 0 to see anything)
+  printf("%s\n", ft_memalloc(5));
+  return (0);
+}
+
+ MEMCHR
 	char s[] = "hello";
 	int c = 'l';
 	size_t n = 4;
@@ -13,7 +30,7 @@ int	main(void)
 }
 
 
-/* COMPARING MEMCPY & MEMMOVE
+COMPARING MEMCPY & MEMMOVE
     char madeline[] = "madeline";
 	char madeline2[] = "madeline";
 	char madeline3[] = "madeline";
