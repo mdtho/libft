@@ -4,17 +4,38 @@ int	ft_getlen(char const *s)
 {
   int i;
   int len;
-  int j;
 
   len = ft_strlen(s);
   i = 0;
-  while (s[i] == '\n' || s[i] == ' ' || s[i] == '\t')
-      i++;
-  
+  if (s[i] == '\n' || s[i] == ' ' || s[i] == '\t')
+    {
+      while (s[i] == '\n' || s[i] == ' ' || s[i] == '\t')
+	i++;
+    }
+  if (s[len - 1] == '\n' || s[len - 1] == '\t' || s[len - 1] == ' ')
+    {
+      len--;
+      while (s[len] == '\n' || s[len] == ' ' || s[len] == '\t')
+	{
+	  len--;
+	  i++;
+	}
+    }
+  return (ft_strlen(s) - i);
 }
 
 char	*ft_strtrim(char const *s)
 {
   char *str;
-  if (!(str = ft_strnew(
+  int i;
+
+  if (!(str = ft_strnew(ft_getlen(s) + 1)))
+    return (NULL);
+  i = 0;
+  if (s[i] == '\n' || s[i] == ' ' || s[i] == 't')
+    {
+      while (s[i] == '\n' || s[i] == ' ' || s[i] == 't')
+	i++;
+    }
+  return (ft_strsub(s, i, ft_getlen(s)));
 }

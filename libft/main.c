@@ -1,13 +1,16 @@
 #include "libft.h"
 #include <stdio.h>
 
+
+int     ft_getlen(char const *s);
+
 int	main(void)
 {
-  char **ap;
-  char hello[] = "hello";
+  char const s[] = "hello ";
 
-  ap = &hello;
-  
+  printf("%d\n", ft_getlen(s));
+  printf("%s\n", ft_strtrim(s));
+  printf("%zu\n", ft_strlen(ft_strtrim(s)));
   return (0);
 }
   
