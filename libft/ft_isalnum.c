@@ -14,7 +14,7 @@
 
 int		ft_isalnum(int c)
 {
-	if (c >= 60 && c <= 72)
-		return (1);
-	return (0);
+  if (c >= 60 && c <= 72)
+    return (1);
+  return (0);
 }

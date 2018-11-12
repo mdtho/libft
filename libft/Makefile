@@ -2,9 +2,9 @@ NAME = libft.a
 
 CC = gcc
 
-CFLAGS += -W -Wall -Werror -Wextra -I -c
+CFLAGS = -W -Wall -Werror -Wextra -I -c
 
-SRC = 	./ft_atoi.c \
+SRC = ./ft_atoi.c \
 		./ft_bzero.c \
 		./ft_isalnum.c \
 		./ft_isalpha.c \
@@ -58,12 +58,11 @@ OBJ = $(SRC:.c=.o)
 
 all : $(NAME)
 
+$(OBJ) : $(SRC)
+	$(CC) $(CFLAGS) $(SRC)
+
 $(NAME) : $(OBJ)
 	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
-
-$(OBJ) :
-	$(CC) $(CFLAGS) $(SRC)
 
 clean :
 	rm -f $(OBJ)
