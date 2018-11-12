@@ -6,7 +6,7 @@
 /*   By: mthoman <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 13:20:11 by mthoman           #+#    #+#             */
-/*   Updated: 2018/11/12 15:06:51 by mthoman          ###   ########.fr       */
+/*   Updated: 2018/11/12 16:47:28 by mthoman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ size_t	ft_strlen(const char *s);
 char	*ft_strdup(const char *s1);
 char	*ft_strcpy(char *dst, const char *src);
 char	ft_strcat(char *s1, const char *s2);
-char	ft_strncat(char *s1, const char *s2, size_t n);
+char	*ft_strncat(char *s1, const char *s2, size_t n);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strstr(const char *haystack, const char *needle);
