@@ -7,9 +7,7 @@ int	ft_nstrings(char const *s, char c);
 
 int	main(void)
 {
-	char const s[] = "     madeline is cool    ";
-	printf("%s\n", ft_strtrim(s));
-	return (0);
+	
 }
 /*
 STRSPLIT

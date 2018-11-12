@@ -1,0 +1,51 @@
+NAME = libft.a
+FLAGS = -Wall -Werror -Wextra -I. -c
+FILES =  Norme: ./ft_atoi.c
+Norme: ./ft_bzero.c
+Norme: ./ft_isalnum.c
+Norme: ./ft_isalpha.c
+Norme: ./ft_isascii.c
+Norme: ./ft_isdigit.c
+Norme: ./ft_isprint.c
+Norme: ./ft_memalloc.c
+Norme: ./ft_memccpy.c
+Norme: ./ft_memchr.c
+Norme: ./ft_memcmp.c
+Norme: ./ft_memdel.c
+Norme: ./ft_memmove.c
+Norme: ./ft_itoa.c
+Norme: ./ft_putchar_fd.c
+Norme: ./ft_memcpy.c
+Norme: ./ft_putendle_fd.c
+Norme: ./ft_putchar.c
+Norme: ./ft_putnbr_fd.c
+Norme: ./ft_putstr_fd.c
+Norme: ./ft_strcat.c
+Norme: ./ft_strchr.c
+Norme: ./ft_strclr.c
+Norme: ./ft_strcmp.c
+Norme: ./ft_strdel.c
+./ft_strdup.c
+./ft_strequ.c
+./ft_striter.c
+./ft_memset.c
+./ft_striteri.c
+./ft_putnbr.c
+./ft_strjoin.c
+./ft_strlen.c
+./ft_strcpy.c
+./ft_strmap.c
+./ft_strmapi.c
+./ft_strncat.c
+./ft_strlcat.c
+./ft_strncmp.c
+./ft_strnequ.c
+./ft_strnew.c
+./ft_strncpy.c
+./ft_strsub.c
+./ft_strnstr.c
+./ft_tolower.c
+./ft_strstr.c
+./ft_toupper.c
+./ft_strtrim.c
+./ft_strsplit.c
