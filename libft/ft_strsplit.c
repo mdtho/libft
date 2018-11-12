@@ -35,7 +35,7 @@ char	**ft_strsplit(char const *s, char c)
   if (!s || !(tab = malloc(ft_nstrings(s, c) + 1)))
     return (NULL);
   i = 0;
-  j = 0;
+  j = -1;
   while (s[i] != '\0' && s[i] == c)
     i++;
   while (s[i] != '\0')
@@ -50,8 +50,7 @@ char	**ft_strsplit(char const *s, char c)
 	    i++;
 	  if (!(tab[j] = ft_strsub(s, m, i - m));
 	      return (NULL);
-	  tab[j][i - m] = '\0';
-	  j++;
+	  tab[++j][i - m] = '\0';
 	}
     }
   tab[i] = 0;
