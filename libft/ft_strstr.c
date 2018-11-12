@@ -6,39 +6,28 @@
 /*   By: mthoman <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 14:10:47 by mthoman           #+#    #+#             */
-/*   Updated: 2018/11/08 14:50:45 by mthoman          ###   ########.fr       */
+/*   Updated: 2018/11/12 14:48:03 by mthoman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
 
-char	*ft_strdup(const char *s1);
+#include "libft.h"
 
-char	*ft_strstr(const char *haystack, const char *needle)
+char	*ft_strstr(const char *s1, const char *s2)
 {
-	int i;
-	int j;
-	int m;
-	char *copy;
+	unsigned int i;
+	unsigned int j;
 
 	i = 0;
-	copy = ft_strdup(haystack);
-	if (needle[0] == '\0')
-		return (copy);
-	while (copy[i] != '\0')
+	if (s1[0] == '\0' && s2[0] == '\0')
+		return ((char *)s1);
+	while (s1[i] != '\0')
 	{
 		j = 0;
-		m = i;
-		if (copy[i] == needle[j])
-		{
-			while (copy[i] == needle[j])
-			{
-				i++;
-				j++;
-			}
-			if (needle[j] == '\0')
-				return (&copy[m]);
-		}
-		i = m + 1;
+		while (s2[j] != '\0' && s1[i + j] == s2[j])
+			j++;
+		if (s2[j] == '\0')
+			return ((char *)s1 + i);
+		i++;
 	}
-	return (0);
+	return (NULL);
 }

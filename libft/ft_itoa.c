@@ -1,36 +1,60 @@
-#include "libft.h" //not good version
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mthoman <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/12 11:13:26 by mthoman           #+#    #+#             */
+/*   Updated: 2018/11/12 13:02:52 by mthoman          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char    *ft_itoa(int nbr)
+#include "libft.h"
+
+int		ft_getlen(int nbr)
 {
-  char *string;
-  int len;
-  int x;
-  int sign;
+	int len;
+	int sign;
 
-  sign = 0;
-  len = 0;
-  if (nbr < 0)
-    {
-      sign = -1;
-      nbr = -nbr;
-      len++;
-    }
-  x = nbr;
-  while (x)
-    {
-      x = x / 10;
-      len++;
-    }
-  if (!(string = malloc(len + 1)))
-    return (NULL);
-  string[len + 1] = '\0';
-  while (nbr)
-    {
-      string[len] = (nbr % 10) + '0';
-      nbr = nbr / 10;
-      len--;
-    }
-  if (sign == -1)
-    string[len] = '-';
-  return (string);
+	sign = 0;
+	len = 0;
+	if (nbr < 0)
+	{
+		nbr = -nbr;
+		len++;
+	}
+	while (nbr)
+	{
+		nbr = nbr / 10;
+		len++;
+	}
+	return (len);
+}
+
+char	*ft_itoa(int n)
+{
+	char	*string;
+	int		sign;
+	int		len;
+
+	len = ft_getlen(n);
+	if (n < 0)
+	{
+		sign = -1;
+		n = -n;
+	}
+	if (!(string = (char*)malloc(sizeof(char) * len)))
+		return (NULL);
+	if (n == -2147483648)
+		return (ft_strcpy(string, "-2147483648"));
+	string[len] = '\0';
+	while (n > 0)
+	{
+		string[--len] = (n % 10) + '0';
+		n = n / 10;
+	}
+	if (sign == -1)
+		string[--len] = '-';
+	return (string);
 }

@@ -6,7 +6,7 @@
 /*   By: mthoman <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 16:08:29 by mthoman           #+#    #+#             */
-/*   Updated: 2018/11/08 16:21:09 by mthoman          ###   ########.fr       */
+/*   Updated: 2018/11/12 12:58:53 by mthoman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,16 @@ char	*ft_strdup(const char *s1);
 
 int		ft_atoi(const char *str)
 {
-	char *copy;
-	int sign;
-	int newnumber;
-	int i;
+	char	*copy;
+	int		sign;
+	int		newnumber;
+	int		i;
 
 	copy = ft_strdup(str);
 	newnumber = 0;
 	i = 0;
-	while (copy[i] == ' ' || ('\t' <= copy[i] && copy[i] <= '\r') || copy[i] > '~')
+	while (copy[i] == ' ' || ('\t' <= copy[i] && copy[i] <= '\r')
+			|| copy[i] > '~')
 		i++;
 	if (copy[i] == '-')
 		sign = -1;

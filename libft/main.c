@@ -7,13 +7,11 @@ int	ft_nstrings(char const *s, char c);
 
 int	main(void)
 {
-  int n = 123;
-  printf("%s\n", ft_itoa(n));
-  return (0);
+	char const s[] = "     madeline is cool    ";
+	printf("%s\n", ft_strtrim(s));
+	return (0);
 }
-
 /*
-
 STRSPLIT
 {
   char const s[] = "salut*****les*etudiants";

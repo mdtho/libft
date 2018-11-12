@@ -6,7 +6,7 @@
 /*   By: mthoman <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 14:52:28 by mthoman           #+#    #+#             */
-/*   Updated: 2018/11/08 15:23:51 by mthoman          ###   ########.fr       */
+/*   Updated: 2018/11/12 13:10:56 by mthoman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@ char	*ft_strdup(const char *s1);
 
 char	*ft_strchr(const char *s, int c)
 {
-	char m;
-	int i;
-	char *copy;
+	char	m;
+	int		i;
+	char	*copy;
 
 	if (c == 0)
 		return (0);

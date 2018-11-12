@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mthoman <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/12 13:13:35 by mthoman           #+#    #+#             */
+/*   Updated: 2018/11/12 13:14:11 by mthoman          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void	ft_striter(char *s, void(*f)(char*))
+void	ft_striter(char *s, void (*f)(char*))
 {
-  if (s == NULL || f == NULL)
-    return ;
-  while (*s != '\0')
-    f(s++);
+	if (s == NULL || f == NULL)
+		return ;
+	while (*s != '\0')
+		f(s++);
 }
