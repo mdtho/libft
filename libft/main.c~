@@ -8,8 +8,6 @@ int	ft_nstrings(char const *s, char c);
 int	main(void)
 {
   int n = 123;
-  printf("%s\n", ft_itoa(n));
-  return (0);
 }
 
 /*
