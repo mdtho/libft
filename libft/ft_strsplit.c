@@ -1,5 +1,4 @@
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_nstrings(char const *s, char c)
 {
