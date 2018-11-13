@@ -62,8 +62,7 @@ OBJ = $(SRC:.c=.o)
 
 all : $(NAME)
 
-$(NAME) :
-	$(CC) $(CFLAGS) $(SRC) $(HEADER)
+$(NAME) : $(OBJ)
 	ar rc $(NAME) $(OBJ)
 
 clean :
