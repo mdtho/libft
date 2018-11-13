@@ -6,13 +6,13 @@
 /*   By: mthoman <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 13:12:48 by mthoman           #+#    #+#             */
-/*   Updated: 2018/11/12 13:12:57 by mthoman          ###   ########.fr       */
+/*   Updated: 2018/11/13 11:58:32 by mthoman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_streque(char const *s1, char const *s2)
+int		ft_strequ(char const *s1, char const *s2)
 {
 	return (ft_strcmp(s1, s2) == 0 ? 1 : 0);
 }

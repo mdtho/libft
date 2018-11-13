@@ -6,18 +6,13 @@
 /*   By: mthoman <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 13:07:15 by mthoman           #+#    #+#             */
-/*   Updated: 2018/11/13 10:47:41 by mthoman          ###   ########.fr       */
+/*   Updated: 2018/11/13 11:59:01 by mthoman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
-{
-	write(fd, &c, 1);
-}
-
-void	ft_putendle_fd(char const *c, int fd)
+void	ft_putendl_fd(char const *c, int fd)
 {
 	int i;
 

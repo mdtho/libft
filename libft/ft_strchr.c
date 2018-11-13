@@ -6,11 +6,11 @@
 /*   By: mthoman <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 14:52:28 by mthoman           #+#    #+#             */
-/*   Updated: 2018/11/12 13:10:56 by mthoman          ###   ########.fr       */
+/*   Updated: 2018/11/13 11:47:33 by mthoman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strdup(const char *s1);
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

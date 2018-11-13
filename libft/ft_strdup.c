@@ -6,13 +6,11 @@
 /*   By: mthoman <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 09:55:21 by mthoman           #+#    #+#             */
-/*   Updated: 2018/11/12 13:12:28 by mthoman          ###   ########.fr       */
+/*   Updated: 2018/11/13 11:58:08 by mthoman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s);
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {
