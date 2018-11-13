@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mthoman <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 14:44:46 by mthoman           #+#    #+#             */
-/*   Updated: 2018/11/13 14:34:13 by mthoman          ###   ########.fr       */
+/*   Created: 2018/11/08 14:52:28 by mthoman           #+#    #+#             */
+/*   Updated: 2018/11/13 11:47:33 by mthoman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+char	*ft_strchr(const char *s, int c)
 {
-	unsigned char	*cast1;
-	unsigned char	*cast2;
+	char	m;
+	int		i;
+	char	*copy;
 
-	if (n == 0)
+	if (c == 0)
 		return (0);
-	cast1 = (unsigned char*)s1;
-	cast2 = (unsigned char*)s2;
-	while (*cast1 == *cast2 && n > 1)
-	{
-		cast1++;
-		cast2++;
-		n--;
-	}
-	return ((int)*cast1 - *cast2);
+	copy = ft_strdup(s);
+	m = c;
+	i = -1;
+	if (copy[0] == '\0')
+		return (0);
+	while (copy[++i] != '\0')
+		if (copy[i] == m)
+			return (&copy[i]);
+	return (0);
 }
