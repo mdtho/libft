@@ -6,7 +6,7 @@
 /*   By: mthoman <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 16:08:29 by mthoman           #+#    #+#             */
-/*   Updated: 2018/11/12 15:09:26 by mthoman          ###   ########.fr       */
+/*   Updated: 2018/11/13 19:14:08 by mthoman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,24 @@
 
 int		ft_atoi(const char *str)
 {
-	char	*copy;
-	int		sign;
-	int		newnumber;
-	int		i;
+	long int		sign;
+	long int		newnumber;
+	long int		i;
 
-	copy = ft_strdup(str);
+	sign = 1;
 	newnumber = 0;
 	i = 0;
-	while (copy[i] == ' ' || ('\t' <= copy[i] && copy[i] <= '\r')
-			|| copy[i] > '~')
+	while (str[i] == ' ' || ('\t' <= str[i] && str[i] <= '\r'))
 		i++;
-	if (copy[i] == '-')
+	if (str[i] == '-')
 		sign = -1;
-	if (copy[i] == '+' || copy[i] == '-')
+	if (str[i] == '+' || str[i] == '-')
 		i++;
-	if (copy[i] >= '0' && copy[i] <= '9')
+	if (str[i] >= '0' && str[i] <= '9')
 	{
-		while (copy[i] >= '0' && copy[i] <= '9')
+		while (str[i] >= '0' && str[i] <= '9')
 		{
-			newnumber = newnumber * 10 + (copy[i] - '0');
+			newnumber = newnumber * 10 + (str[i] - '0');
 			i++;
 		}
 		return (newnumber * sign);

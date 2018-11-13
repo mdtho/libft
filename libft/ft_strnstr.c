@@ -1,51 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mthoman <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/08 15:26:34 by mthoman           #+#    #+#             */
-/*   Updated: 2018/11/13 12:03:30 by mthoman          ###   ########.fr       */
+/*   Created: 2018/11/08 14:10:47 by mthoman           #+#    #+#             */
+/*   Updated: 2018/11/13 16:07:16 by mthoman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_assign(char *copy, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int i;
-	int j;
-	int m;
-	int x;
+	unsigned int i;
+	unsigned int j;
+	unsigned int x;
 
 	i = 0;
-	while (copy[i] != '\0' && len > 0)
+	if (needle[0] == '\0' && haystack[0])
+		return ((char *)haystack);
+	while (haystack[i] != '\0' && len > 0)
 	{
 		j = 0;
-		m = i;
 		x = len + 1;
-		if (copy[i] == needle[j])
+		if (needle[j] == haystack[i])
 		{
-			while (copy[i] == needle[j] && --x > 0)
-			{
-				i++;
+			while (haystack[i + j] == needle[j] && --x > 0 && haystack[i + j] && needle[j])
 				j++;
-			}
 			if (needle[j] == '\0')
-				return (&copy[m]);
+				return ((char *)haystack + i);
 		}
-		i = m + 1;
+		i++;
 		len--;
 	}
-	return (0);
-}
-
-char		*ft_strnstr(const char *haystack, const char *needle, size_t len)
-{
-	char	*copy;
-
-	if (!(copy = ft_strdup(haystack)))
-		return (NULL);
-	return (ft_assign(copy, needle, len));
+	return (NULL);
 }

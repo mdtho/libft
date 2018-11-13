@@ -6,46 +6,24 @@
 /*   By: mthoman <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 14:50:44 by mthoman           #+#    #+#             */
-/*   Updated: 2018/11/13 10:54:43 by mthoman          ###   ########.fr       */
+/*   Updated: 2018/11/13 19:27:15 by mthoman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int			ft_getlen(char const *s)
+char	*ft_strtrim(char const *s)
 {
-	int i;
-	int len;
+	char const *s_end;
 
-	len = ft_strlen(s);
-	i = 0;
-	if (s[i] == '\n' || s[i] == ' ' || s[i] == '\t')
-		while (s[i] == '\n' || s[i] == ' ' || s[i] == '\t')
-			i++;
-	if (s[len - 1] == '\n' || s[len - 1] == '\t' || s[len - 1] == ' ')
-	{
-		len--;
-		while (s[len] == '\n' || s[len] == ' ' || s[len] == '\t')
-		{
-			len--;
-			i++;
-		}
-	}
-	return (ft_strlen(s) - i);
-}
-
-char				*ft_strtrim(char const *s)
-{
-	char	*str;
-	int		i;
-
-	if (!(str = ft_strnew(ft_getlen(s) + 1)))
+	if (s == NULL)
 		return (NULL);
-	i = 0;
-	if (s[i] == '\n' || s[i] == ' ' || s[i] == 't')
-	{
-		while (s[i] == '\n' || s[i] == ' ' || s[i] == 't')
-			i++;
-	}
-	return (ft_strsub(s, i, ft_getlen(s)));
+	while (*s == ' ' || *s == '\t' || *s == '\n')
+		s++;
+	if (*s == '\0')
+		return (ft_strnew(0));
+	s_end = s + ft_strlen(s) - 1;
+	while (*s_end == ' ' || *s_end == '\t' || *s_end == '\n')
+		s_end--;
+	return (ft_strsub(s, 0, s_end - s + 1));X
 }

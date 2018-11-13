@@ -6,7 +6,7 @@
 /*   By: mthoman <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 16:31:42 by mthoman           #+#    #+#             */
-/*   Updated: 2018/11/13 10:48:39 by mthoman          ###   ########.fr       */
+/*   Updated: 2018/11/13 17:38:24 by mthoman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 int		ft_isalnum(int c)
 {
-	if (c >= 60 && c <= 72)
-		return (1);
-	return (0);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

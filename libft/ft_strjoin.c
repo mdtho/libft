@@ -6,7 +6,7 @@
 /*   By: mthoman <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 13:14:55 by mthoman           #+#    #+#             */
-/*   Updated: 2018/11/12 13:15:18 by mthoman          ###   ########.fr       */
+/*   Updated: 2018/11/13 18:18:33 by mthoman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,22 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char *fresh;
+	char *fresher;
 
-	if (!s1 && !s2)
-		return (NULL);
+	if (s2 == NULL && s1 == NULL)
+		return (ft_strnew(0));
 	else if (s1 == NULL)
 		return (ft_strdup(s2));
 	else if (s2 == NULL)
 		return (ft_strdup(s1));
-	if (!(fresh = ft_strnew(ft_strlen(s1) + ft_strlen(s2) + 1)))
+	fresh = ft_strnew(ft_strlen(s1) + ft_strlen(s2));
+	if (fresh == NULL)
 		return (NULL);
-	while (*s1)
-		*fresh++ = *s1++;
-	while (*s2)
-		*fresh++ = *s2++;
-	*fresh = '\0';
+	fresher = fresh;
+	while (*s1 != '\0')
+		*fresher++ = *s1++;
+	while (*s2 != '\0')
+		*fresher++ = *s2++;
+	*fresher = '\0';
 	return (fresh);
 }
