@@ -6,13 +6,11 @@
 /*   By: mthoman <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 13:08:01 by mthoman           #+#    #+#             */
-/*   Updated: 2018/11/12 13:08:50 by mthoman          ###   ########.fr       */
+/*   Updated: 2018/11/13 10:57:08 by mthoman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_putchar(char c);
 
 void	ft_putnbr(int n)
 {

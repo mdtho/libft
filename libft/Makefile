@@ -2,7 +2,9 @@ NAME = libft.a
 
 CC = gcc
 
-CFLAGS = -W -Wall -Werror -Wextra -I -c
+HEADER = libft.h
+
+CFLAGS = -Wall -Werror -Wextra -I -c
 
 SRC = ./ft_atoi.c \
 		./ft_bzero.c \
@@ -20,7 +22,7 @@ SRC = ./ft_atoi.c \
 		./ft_itoa.c \
 		./ft_putchar_fd.c \
 		./ft_memcpy.c \
-		./ft_putendle_fd.c \
+		./ft_putendl_fd.c \
 		./ft_putchar.c \
 		./ft_putnbr_fd.c \
 		./ft_putstr_fd.c \
@@ -53,15 +55,15 @@ SRC = ./ft_atoi.c \
 		./ft_toupper.c \
 		./ft_strtrim.c \
 		./ft_strsplit.c \
+		./ft_putendl.c \
+		./ft_putstr.c
 
 OBJ = $(SRC:.c=.o)
 
 all : $(NAME)
 
-$(OBJ) : $(SRC)
-	$(CC) $(CFLAGS) $(SRC)
-
-$(NAME) : $(OBJ)
+$(NAME) :
+	$(CC) $(CFLAGS) $(SRC) $(HEADER)
 	ar rc $(NAME) $(OBJ)
 
 clean :

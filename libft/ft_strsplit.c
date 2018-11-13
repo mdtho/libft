@@ -6,13 +6,13 @@
 /*   By: mthoman <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 14:05:33 by mthoman           #+#    #+#             */
-/*   Updated: 2018/11/12 14:32:43 by mthoman          ###   ########.fr       */
+/*   Updated: 2018/11/13 10:49:47 by mthoman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_nstrings(char const *s, char c)
+static int		ft_nstrings(char const *s, char c)
 {
 	int i;
 	int strings;
@@ -37,7 +37,7 @@ int		ft_nstrings(char const *s, char c)
 	return (strings);
 }
 
-char	**ft_assign_tab(char **tab, char const *s, char c)
+static char		**ft_assign_tab(char **tab, char const *s, char c)
 {
 	int		i;
 	int		j;
@@ -66,7 +66,7 @@ char	**ft_assign_tab(char **tab, char const *s, char c)
 	return (tab);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	char	**tab;
 

@@ -6,13 +6,13 @@
 /*   By: mthoman <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 14:50:44 by mthoman           #+#    #+#             */
-/*   Updated: 2018/11/12 14:55:44 by mthoman          ###   ########.fr       */
+/*   Updated: 2018/11/13 10:54:43 by mthoman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_getlen(char const *s)
+static int			ft_getlen(char const *s)
 {
 	int i;
 	int len;
@@ -34,7 +34,7 @@ int			ft_getlen(char const *s)
 	return (ft_strlen(s) - i);
 }
 
-char		*ft_strtrim(char const *s)
+char				*ft_strtrim(char const *s)
 {
 	char	*str;
 	int		i;

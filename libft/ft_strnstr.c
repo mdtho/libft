@@ -6,7 +6,7 @@
 /*   By: mthoman <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 15:26:34 by mthoman           #+#    #+#             */
-/*   Updated: 2018/11/12 13:58:55 by mthoman          ###   ########.fr       */
+/*   Updated: 2018/11/13 10:55:34 by mthoman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strdup(const char *s1);
 
-char	*ft_assign(char *copy, const char *needle, size_t len)
+static char		*ft_assign(char *copy, const char *needle, size_t len)
 {
 	int i;
 	int j;
@@ -43,7 +43,7 @@ char	*ft_assign(char *copy, const char *needle, size_t len)
 	return (0);
 }
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char			*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	char	*copy;
 
