@@ -4,7 +4,7 @@ CC = gcc
 
 HEADER = libft.h
 
-CFLAGS = -Wall -Werror -Wextra -c
+CFLAGS = -Wall -Werror -Wextra -I -c
 
 SRC = ./ft_atoi.c \
 		./ft_bzero.c \
