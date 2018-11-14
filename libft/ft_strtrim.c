@@ -6,7 +6,7 @@
 /*   By: mthoman <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 14:50:44 by mthoman           #+#    #+#             */
-/*   Updated: 2018/11/13 19:28:29 by mthoman          ###   ########.fr       */
+/*   Updated: 2018/11/14 16:45:18 by mthoman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strtrim(char const *s)
 {
 	char const *end;
 
-	if (s == NULL)
+	if (!s)
 		return (NULL);
 	while (*s == ' ' || *s == '\t' || *s == '\n')
 		s++;
