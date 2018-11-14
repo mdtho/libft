@@ -6,9 +6,11 @@
 /*   By: mthoman <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 11:12:08 by mthoman           #+#    #+#             */
-/*   Updated: 2018/11/12 16:45:37 by mthoman          ###   ########.fr       */
+/*   Updated: 2018/11/14 18:13:44 by mthoman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strcat(char *s1, const char *s2)
 {
@@ -16,14 +18,16 @@ char	*ft_strcat(char *s1, const char *s2)
 	int j;
 
 	i = 0;
-	while (s1[i] != '\0')
+	j = 0;
+	while (s1[i])
 		i++;
-	j = -1;
-	while (s2[++j] != '\0')
+	while (s2[j])
 	{
 		s1[i] = s2[j];
 		i++;
+		j++;
+		if (s2[j] == '\0')
+			s1[i] = '\0';
 	}
-	s1[i] = '\0';
 	return (s1);
 }
