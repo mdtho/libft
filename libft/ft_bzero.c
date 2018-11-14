@@ -6,7 +6,7 @@
 /*   By: mthoman <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 14:34:31 by mthoman           #+#    #+#             */
-/*   Updated: 2018/11/12 12:59:29 by mthoman          ###   ########.fr       */
+/*   Updated: 2018/11/14 15:17:09 by mthoman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-  if (!(n))
-    return ;
-  ft_memset(s, 0, n);
+	if (!(n))
+		return ;
+	ft_memset(s, 0, n);
 }
