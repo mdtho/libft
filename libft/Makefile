@@ -60,7 +60,11 @@ SRC = ./ft_atoi.c \
 		./ft_strrchr.c \
 		./ft_strdel.c \
 		./ft_lstnew.c \
-		./ft_lstadd.c
+		./ft_lstadd.c \
+		./ft_lstiter.c \
+		./ft_lstdel.c \
+		./ft_lstdelone.c \
+		./ft_lstmap.c
 
 OBJ = $(SRC:.c=.o)
 
