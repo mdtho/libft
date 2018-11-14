@@ -4,7 +4,7 @@ CC = gcc
 
 HEADER = libft.h
 
-CFLAGS = -Wall -Werror -Wextra -c
+CFLAGS = -Wall -Werror -Wextra
 
 SRC = ./ft_atoi.c \
 		./ft_bzero.c \
@@ -57,7 +57,8 @@ SRC = ./ft_atoi.c \
 		./ft_strsplit.c \
 		./ft_putendl.c \
 		./ft_putstr.c \
-		./ft_strrchr.c
+		./ft_strrchr.c \
+		./ft_strdel.c
 
 OBJ = $(SRC:.c=.o)
 
