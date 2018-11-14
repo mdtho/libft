@@ -59,7 +59,8 @@ SRC = ./ft_atoi.c \
 		./ft_putstr.c \
 		./ft_strrchr.c \
 		./ft_strdel.c \
-		./ft_lstnew.c
+		./ft_lstnew.c \
+		./ft_lstadd.c
 
 OBJ = $(SRC:.c=.o)
 

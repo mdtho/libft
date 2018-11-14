@@ -76,5 +76,6 @@ void	ft_putstr_fd(char const *s, int fd);
 char	*ft_strrchr(const char *s, int c);
 void	ft_strdel(char **as);
 t_list	*ft_lstnew(void const *content, size_t content_size);
+void	ft_lstadd(t_list **alst, t_list *new);
 
 #endif
