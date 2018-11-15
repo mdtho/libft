@@ -69,7 +69,7 @@ SRC = ./ft_atoi.c \
 		./ft_countwords.c \
 		./ft_lstreverse.c \
 		./ft_capitalize.c \
-		./ft_strndup
+		./ft_strndup.c
 
 OBJ = $(SRC:.c=.o)
 
