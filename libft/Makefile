@@ -64,7 +64,12 @@ SRC = ./ft_atoi.c \
 		./ft_lstiter.c \
 		./ft_lstdel.c \
 		./ft_lstdelone.c \
-		./ft_lstmap.c
+		./ft_lstmap.c \
+		./ft_lstaddback.c \
+		./ft_countwords.c \
+		./ft_lstreverse.c \
+		./ft_capitalize.c \
+		./ft_strndup
 
 OBJ = $(SRC:.c=.o)
 
